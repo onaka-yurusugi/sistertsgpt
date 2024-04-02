@@ -3,12 +3,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from openai import OpenAI
 import os
-from dotenv import load_dotenv
 
 app = FastAPI()
-
-# 環境変数の読み込み
-load_dotenv()
 
 class ChatRequest(BaseModel):
     message: str
